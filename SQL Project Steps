@@ -1,0 +1,26 @@
+# IG_Data - Data Analyst Project
+Analyzing Instagram-like data to ask and answer questions regarding user activity and engagement, 
+user retention and growth, and content performance.
+
+
+Data Manipulation Steps:
+
+1. Created a database and set up the schema.
+2. Inserted all the data into the tables.
+3. Asked some basic questions to help me better understand the data I’m working with.
+
+The questions:
+
+* Who are the oldest users on Instagram?
+* What day of the week do most users register on?
+* Who are the users who have never posted?
+* How many times does the average user post?
+* What are the top 5 most commonly used #hashtags?
+* Who are the users that are most likely a bot?
+* Who is the most active user? Using multiple approaches.
+* What is the most popular photo with the highest engagement?
+* What is the trend in user sign ups over different periods of time?
+* What is the user retention rate? (1 month & 3 months after signing up).
+* Who are the users with the highest number of followers?
+* Which hashtags are most effective for driving engagement?
+
