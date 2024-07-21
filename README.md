@@ -26,3 +26,7 @@ Identifying the users with the highest number of followers.
 
 4.	Which hashtags are the most effective for driving engagement?
 I need a list of hashtags ordered by the total engagement they generated. 
+
+Data Source I used - 
+
+The dataset analyzed in this project was obtained from a MySQL bootcamp. It consists of thousands of rows of data, including: users table, photos table, follows table (followers and followees), comments table, likes table and hashtags table. mimicking the typical data structure of an Instagram database.
