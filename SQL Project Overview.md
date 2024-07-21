@@ -2,7 +2,7 @@
 Analyzing Instagram-like data to ask and answer questions regarding user activity and engagement, 
 user retention and growth, and content performance.
 
-Here are the questions I've asked before analyzing the data:
+Here are the questions I've asked before analyzing the data in SQL:
 
 User activity & engagement - 
 
