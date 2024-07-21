@@ -1,4 +1,4 @@
-IG_Data - Data Analyst Project
+IG_DATA - SQL DATA ANALYST PROJECT
 
 Analyzing Instagram-like data to ask and answer questions regarding user activity and engagement, user retention and growth, and content performance.
 
