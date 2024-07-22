@@ -1,3 +1,6 @@
+/*  Skills used: CREATE, SELECT, CTE, JOINS, GROUP BY, SUB QUERIES, COHORT  */
+
+
 -- Creating a database and setting up the schema:
 
 CREATE DATABASE instagram_db;
