@@ -359,8 +359,6 @@ within the specifies period (30 or 90 days after sign-up). */
 
 -- The final step is the 'select' statement that will calculate the retention rate as the percentage of active users from the cohort.
 
--- 30 Day interval:
-
 WITH cohort AS (
     SELECT id AS user_id, created_at AS signup_date
     FROM users
@@ -370,32 +368,14 @@ activity AS (
     SELECT user_id, created_at AS activity_date
     FROM photos
 ),
-active_users AS (
+active_users_1month AS (
     SELECT c.user_id
     FROM cohort c
     JOIN activity a ON c.user_id = a.user_id
     WHERE a.activity_date BETWEEN c.signup_date AND DATE_ADD(c.signup_date, INTERVAL 30 DAY)
     GROUP BY c.user_id
-)
-SELECT 
-    COUNT(DISTINCT active_users.user_id) * 100.0 / COUNT(DISTINCT cohort.user_id) AS retention_rate
-FROM cohort
-LEFT JOIN active_users ON cohort.user_id = active_users.user_id;
-
--- Result - 23% Retention rate (23% Of users are still active after a month)
-
--- 90 Day interval:
-
-WITH cohort AS (
-    SELECT id AS user_id, created_at AS signup_date
-    FROM users
-    WHERE created_at BETWEEN '2016-05-01' AND '2016-12-31'
 ),
-activity AS (
-    SELECT user_id, created_at AS activity_date
-    FROM photos
-),
-active_users AS (
+active_users_3month AS (
     SELECT c.user_id
     FROM cohort c
     JOIN activity a ON c.user_id = a.user_id
@@ -403,10 +383,13 @@ active_users AS (
     GROUP BY c.user_id
 )
 SELECT 
-     COUNT(DISTINCT active_users.user_id) * 100.0 / COUNT(DISTINCT cohort.user_id) AS retention_rate
-FROM cohort
-LEFT JOIN active_users ON cohort.user_id = active_users.user_id;
+    COUNT(DISTINCT au1.user_id) * 100.0 / COUNT(DISTINCT c.user_id) AS retention_rate_1month,
+    COUNT(DISTINCT au3.user_id) * 100.0 / COUNT(DISTINCT c.user_id) AS retention_rate_3month
+FROM cohort c
+LEFT JOIN active_users_1month au1 ON c.user_id = au1.user_id
+LEFT JOIN active_users_3month au3 ON c.user_id = au3.user_id;
 
+-- Result - 23% Retention rate (23% Of users are still active after a month)
 -- Result: 37% Retention rate (37% Of users are still active after 3 months)
 
 
