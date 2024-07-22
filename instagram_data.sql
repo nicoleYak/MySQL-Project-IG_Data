@@ -383,6 +383,9 @@ active_users_3month AS (
     GROUP BY c.user_id
 )
 SELECT 
+    COUNT(DISTINCT c.user_id) AS total_users,
+    COUNT(DISTINCT au1.user_id) AS retained_users_1month,
+    COUNT(DISTINCT au3.user_id) AS retained_users_3month,
     COUNT(DISTINCT au1.user_id) * 100.0 / COUNT(DISTINCT c.user_id) AS retention_rate_1month,
     COUNT(DISTINCT au3.user_id) * 100.0 / COUNT(DISTINCT c.user_id) AS retention_rate_3month
 FROM cohort c
