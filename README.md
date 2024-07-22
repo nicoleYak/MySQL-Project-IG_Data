@@ -2,6 +2,8 @@ IG_DATA - SQL DATA ANALYST PROJECT
 
 Analyzing Instagram-like data to ask and answer questions regarding user activity and engagement, user retention and growth, and content performance.
 
+TABLEAU Dashboard - https://public.tableau.com/app/profile/nicole.yakobi/viz/IG_DataProject/Dashboard1
+
 Here are some of the questions I've asked before analyzing the data in SQL:
 
 User activity & engagement -
