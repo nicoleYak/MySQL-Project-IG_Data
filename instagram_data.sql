@@ -317,11 +317,11 @@ ORDER BY signup_date;
 -- Getting the number of sign-ups per week: 
     
 SELECT 
-	YEARWEEK(created_at , 1) AS signup_week,
+	CONCAT(YEAR(created_at), '-', LPAD(WEEK(created_at, 1), 2, '0')) AS signup_week, -- The LPAD that the WEEK part is always two digits.
     COUNT(*) AS signup_count
 FROM users
 WHERE created_at BETWEEN '2016-05-06 00:14:21' AND '2017-05-04 16:32:16'
-GROUP BY YEARWEEK(created_at , 1)
+GROUP BY signup_week
 ORDER BY signup_week;
     
 /*  YEARWEEK(created_at, 1) extracts the year and week number from the 
