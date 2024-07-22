@@ -16,6 +16,4 @@ User retention and growth -
 
 4 - What is the user retention rate? (Based on posting photos). Using Cohort Analysis, calculating the percentage of users who are still active after a certain period of time (1 month, 3 months).
 
-5 - Who is the most followed user? Identifying the users with the highest number of followers.
-
-6 - Which hashtags are the most effective for driving engagement? I need a list of hashtags ordered by the total engagement they generated.
+5 - Which hashtags are the most effective for driving engagement? I need a list of hashtags ordered by the total engagement they generated.
