@@ -450,7 +450,7 @@ PhotoEngagement AS (
 -- Aggregate engagement by hashtag:
 
 SELECT 
-	ht.tag_name,
+	CONCAT("#" ,ht.tag_name) AS tag,
 	SUM(pe.total_engagement) AS total_engagement
 FROM tags ht
 JOIN photo_tags pt ON ht.id = pt.tag_id
