@@ -2,9 +2,9 @@
 Analyzing Instagram-like data to ask and answer questions regarding user activity and engagement, 
 user retention and growth, and content performance.
 
-Here are the questions I've asked before analyzing the data in SQL:
+**Here are the questions I've asked before analyzing the data in SQL:**
 
-User activity & engagement - 
+**User activity & engagement -**
 
 1.	Who is the most active user on Instagram? 
 based on their engagement and activity on the app.
@@ -12,7 +12,7 @@ based on their engagement and activity on the app.
 2.	Which post has the highest engagement and is the most popular, 
 based on the likes and comments?
 
-User retention and growth -
+**User retention and growth -**
 
 1.	How has the user base grown over time? 
 Analyzing the trend in user sign ups over different periods of time 
